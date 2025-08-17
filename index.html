@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Gestor de Incidencias</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Mini Gestor de Incidencias</h1>
+  </header>
+
+  <main>
+    <!-- Formulario para nueva incidencia -->
+    <section class="formulario">
+      <h2>Nueva incidencia</h2>
+      <form id="formIncidencia">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" required>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" required></textarea>
+
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" required>
+
+        <button type="submit">Añadir incidencia</button>
+      </form>
+    </section>
+
+    <section class="contador">
+  <h2>Resumen</h2>
+  <p>Incidencias abiertas: <span id="abiertas">0</span></p>
+  <p>Incidencias resueltas: <span id="resueltas">0</span></p>
+</section>
+
+<section class="filtros">
+  <label for="filtro">Mostrar:</label>
+  <select id="filtro">
+    <option value="todas">Todas</option>
+    <option value="abiertas">Abiertas</option>
+    <option value="resueltas">Resueltas</option>
+  </select>
+</section>
+
+
+
+    <!-- Listado de incidencias -->
+    <section class="listado">
+      <h2>Listado de incidencias</h2>
+      <ul id="listaIncidencias"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
